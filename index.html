@@ -396,6 +396,10 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
     }
+    /* Keep the contact block readable on narrow screens */
+    #contact .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
     .card {
       background: rgba(255,255,255,0.02);
       border: 1px solid rgba(255,255,255,0.06);
@@ -748,7 +752,7 @@
     <section id="contact" class="section">
       <h2>Оставьте заявку — покажем демо за 24 часа</h2>
       <p class="desc">Заполнив форму, получите консультацию и примерный план внедрения под ваш бизнес.</p>
-      <div class="grid-3" style="grid-template-columns: 1fr 1fr;">
+      <div class="grid-3">
         <div class="card">
           <h3>Форма обратной связи</h3>
           <form name="contact" method="post" action="https://formspree.io/f/xwpkzwkr">
