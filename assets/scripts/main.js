@@ -55,5 +55,14 @@
       toggleMobile();
     }
   });
+
+  // Раскрытие подпунктов в тарифах
+  document.querySelectorAll('.pricing-list > li:has(> ul)').forEach(item => {
+    item.addEventListener('click', (e) => {
+      // Предотвращаем клик, если клик по ссылке внутри
+      if (e.target.closest('a')) return;
+      item.classList.toggle('is-open');
+    });
+  });
 })();
 
